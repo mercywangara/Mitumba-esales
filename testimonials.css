@@ -12,6 +12,7 @@ body {
   background: #DE9D20;
   padding: 0 32px;
   height: 90px;
+  box-sizing: border-box;
 }
 
 .header-left {
@@ -36,6 +37,11 @@ body {
   font-weight: normal;
 }
 
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
 .nav a {
   color: #fff;
   margin: 0 18px;
@@ -77,6 +83,8 @@ main {
   flex-direction: column;
   align-items: center;
   margin: 60px 0 0 0;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .section-title {
@@ -84,6 +92,7 @@ main {
   font-size: 2rem;
   margin-bottom: 36px;
   font-weight: 700;
+  text-align: center;
 }
 
 .slideshow-container {
@@ -95,6 +104,7 @@ main {
   align-items: center;
   justify-content: center;
   margin-bottom: 16px;
+  box-sizing: border-box;
 }
 
 .arrow {
@@ -192,14 +202,113 @@ main {
   background-color: #DE9D20;
 }
 
-/* Responsive */
+/* Responsive Additions and Improvements */
+@media (max-width: 1100px) {
+  .testimonial-card {
+    max-width: 80vw;
+    padding: 28px 8vw;
+  }
+  .slideshow-container {
+    width: 80vw;
+    max-width: 98vw;
+  }
+}
+
+@media (max-width: 870px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    padding: 18px 12px;
+    gap: 10px;
+  }
+  .header-left {
+    margin-bottom: 8px;
+  }
+  .brand {
+    font-size: 1.45rem;
+  }
+  .logo {
+    width: 45px;
+    height: 45px;
+  }
+  .nav a {
+    font-size: 0.98rem;
+    margin: 0 10px;
+  }
+  .header-right .download-btn {
+    font-size: 0.92rem;
+    padding: 9px 14px;
+  }
+}
+
 @media (max-width: 700px) {
   .slideshow-container {
-    width: 95vw;
+    width: 97vw;
+    max-width: 99vw;
+    min-height: 180px;
+    margin-bottom: 12px;
   }
   .testimonial-card {
-    padding: 18px 8vw;
+    padding: 18px 2vw;
     min-width: 0;
-    max-width: 95vw;
+    max-width: 97vw;
+  }
+  .section-title {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+  }
+  .brand {
+    font-size: 1.2rem;
+  }
+  .logo {
+    width: 34px;
+    height: 34px;
+    margin-right: 8px;
+  }
+  .header {
+    padding: 12px 6px;
+    height: auto;
+  }
+  .nav {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 100%;
+    gap: 0.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonial-card {
+    padding: 12px 2vw;
+    font-size: 0.97rem;
+  }
+  .slideshow-container {
+    min-height: 120px;
+    padding: 0;
+  }
+  .arrow {
+    font-size: 2rem;
+    padding: 0 8px;
+  }
+  .brand, .brand-sub {
+    font-size: 1rem;
+  }
+  .section-title {
+    font-size: 1.07rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .testimonial-card {
+    padding: 8px 1vw;
+    font-size: 0.91rem;
+  }
+  .logo {
+    width: 25px;
+    height: 25px;
+  }
+  .brand, .brand-sub {
+    font-size: 0.89rem;
   }
 }
