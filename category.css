@@ -255,6 +255,7 @@ h2 {
 
     h2 {
         font-size: 1.8rem;
+        font-weight: bold;
     }
 
     .category-container {
@@ -264,6 +265,7 @@ h2 {
 
     .cat-box {
         width: 90%; 
+
     }
 
     .offer, .aligned-offer-image {
